@@ -325,7 +325,7 @@ em { font-style: italic; }
 
 /* ---------- Servicios ---------- */
 .services { background: var(--white); }
-.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 1040px; margin-inline: auto; }
 .service-card {
   background: var(--cream);
   border-radius: var(--radius-lg);
@@ -335,16 +335,17 @@ em { font-style: italic; }
   transition: transform 0.35s var(--ease-standard), box-shadow 0.35s var(--ease-standard);
 }
 .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-.service-media { aspect-ratio: 4 / 4.4; overflow: hidden; }
+.service-media { aspect-ratio: 1 / 1; overflow: hidden; }
 .service-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s var(--ease-standard); }
 .service-card:hover .service-media img { transform: scale(1.06); }
-.service-body { padding: 20px 20px 24px; position: relative; }
-.service-body::before { content: ""; display: block; width: 28px; height: 3px; background: var(--pink); border-radius: 2px; margin-bottom: 14px; }
-.service-body h3 { font-size: 1.12rem; margin-bottom: 6px; }
-.service-body p { font-size: 0.92rem; color: var(--color-ink-soft); line-height: 1.55; }
+.service-body { padding: 16px 16px 20px; position: relative; }
+.service-body::before { content: ""; display: block; width: 24px; height: 3px; background: var(--pink); border-radius: 2px; margin-bottom: 12px; }
+.service-body h3 { font-size: 1.02rem; margin-bottom: 5px; }
+.service-body p { font-size: 0.86rem; color: var(--color-ink-soft); line-height: 1.5; }
 .services-cta { margin-top: clamp(40px, 5vw, 56px); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 22px; text-align: center; }
 .services-cta p { font-weight: 600; font-size: 1.05rem; }
-@media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 1024px) { .services-grid { gap: 14px; } }
+@media (max-width: 760px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) {
   .services-grid { gap: 12px; }
   .service-body { padding: 14px 14px 18px; }
@@ -489,6 +490,10 @@ em { font-style: italic; }
     box-shadow: var(--shadow-sm);
   }
   .reviews-nav-btn:hover { background: var(--pink); }
+}
+/* Pantallas medianas: las flechas quedan dentro del margen para no crear scroll horizontal */
+@media (min-width: 860px) and (max-width: 1120px) {
+  .reviews-nav { left: -12px; right: -12px; }
 }
 
 /* ---------- Visítanos ---------- */
