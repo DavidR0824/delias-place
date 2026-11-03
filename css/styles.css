@@ -530,7 +530,18 @@ em { font-style: italic; }
 .footer-brand p { font-size: 0.86rem; margin-top: 4px; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 22px; font-weight: 600; font-size: 0.92rem; }
 .footer-nav a:hover { color: var(--yellow); }
-.footer-copy { font-size: 0.84rem; width: 100%; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.footer-bottom {
+  width: 100%;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  font-size: 0.84rem;
+}
+.footer-credit a { color: var(--yellow); font-weight: 600; }
+.footer-credit a:hover { text-decoration: underline; }
 
 /* ---------- WhatsApp flotante ---------- */
 .wa-float {
